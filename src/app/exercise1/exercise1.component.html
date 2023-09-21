@@ -1,0 +1,55 @@
+<!-- exercise 1 Task : 1  -->
+<div class="length-data-section mt-3">
+    <p>Find Text Length</p>
+    <label for="">Enter The Text</label>
+    <input class="form-control" type="text" placeholder="Enter The Text.........." [(ngModel)]="textValue">
+    <p> {{setLengthMessage}} </p>
+    <button class="btn btn-success" (click)="findLength()" [disabled]="lengthBtnValue">Find Length</button>
+    <button class="btn btn-primary mx-2" (click)="this.lengthBtnValue = false">Enable</button>
+</div>
+
+<!-- exercise 1 Task:2 & Task 3 -->
+
+<div class="object-data-section mt-5">
+    <p>Object Data SAnd Array of Object Data Show </p>
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <label for="formGroupExampleInput" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter Name" [(ngModel)]="name">
+        </div>
+        <div class="col-12 col-sm-6">
+            <label for="formGroupExampleInput2" class="form-label">Age</label>
+            <input type="number" class="form-control" placeholder="Enter Age" [(ngModel)]="age">
+        </div>
+    </div>
+    <p> {{objectValue}} </p>
+    <p>{{allUserDataArray}} </p>
+    <div class="d-flex flex-row">
+        <button class="btn btn-success mt-2" (click)="submitFormData()"
+            [style.display]="submitDataBtnValue == true ? 'none' : 'block'">submit</button>
+        <button class=" btn btn-primary mt-2 mx-2" (click)="this.submitDataBtnValue = false">Show Button</button>
+        <button class="btn btn-success mt-2" (click)="submitUserValue()"
+            [style.display]="submitDataBtnValue == true ? 'none' : 'block'">push data in array</button>
+    </div>
+</div>
+
+<!-- Task -4  -->
+<div class="number-section mt-3">
+    <p> find Number Odd or Even</p>
+    <div class="col-12 col-sm-6">
+        <label for="formGroupExampleInput" class="form-label">Number</label>
+        <input type="number" class="form-control" placeholder="Enter number" [(ngModel)]="number">
+    </div>
+    <h1 [style.color]="number % 2 == 0 ? 'red' : 'green'">{{number}}</h1>
+</div>
+<!-- Task -5  -->
+<div class="use-directive-section">
+    <p id="userInfo" appSpanDirective>
+        Lorem, ipsum dolor sit <span>amet consectetur adipisicing elit.</span> Dolor officiis quisquam cupiditate eos
+        <span>repudiandae ea</span> eligendi nam voluptatem nobis, excepturi ratione facilis <span>dignissimos quaerat
+            nihil</span> consequatur vel
+        delectus provident asperiores? Lorem ipsum dolor sit amet <span>consectetur adipisicing elit.</span> Debitis
+        recusandae abvoluptas corporis. <span>Quos animi commodi eius</span> labore saepe ratione quisquam minima, vitae
+        ad, natus hic sequi <span>fugit, ea accusamus?</span>
+    </p>
+</div>

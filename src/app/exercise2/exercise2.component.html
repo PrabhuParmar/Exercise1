@@ -1,0 +1,13 @@
+<!-- main component item form And item Data show  -->
+<div class="container exercise2-section">
+    <div class="row item-form-section my-5 d-flex justify-content-center">
+        <div class="col item-form-container">
+            <app-add-product-form (productData)="productDataAdded($event)"></app-add-product-form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-display-product [productData]="productItem"></app-display-product>
+        </div>
+    </div>
+</div>

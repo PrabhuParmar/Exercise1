@@ -1,0 +1,26 @@
+<!-- Data Show in Table  -->
+<div class="table-data-section table-responsive">
+    <table class="table ">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col" class="name-col">Item Name</th>
+                <th scope="col" class="description-col">Item description</th>
+                <th scope="col" class="price-col">Item Price</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let product of productData" class="product-data-content">
+            <tr [style.background]="product.price >=1000 ? 'red' : 'transparent' ">
+                <td> {{product.id}} </td>
+                <td class="table-data"> {{product.name}} </td>
+                <td class="table-data"> {{product.description}}</td>
+                <td> {{product.price}} </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-container>
+        <div *ngIf="productData=='' " class="d-flex justify-content-around col-12 table-empty-message">
+            <h2 class="message">No Record Found</h2>
+        </div>
+    </ng-container>
+</div>

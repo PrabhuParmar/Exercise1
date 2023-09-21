@@ -1,0 +1,28 @@
+/* Table section css Start  */
+.table-data-section .table-empty-message .message {
+    color: red;
+    margin: 0;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.table-data-section .table {
+    --bs-table-bg: unset !important;
+}
+
+.table-data-section .table .price-col {
+    min-width: 93px;
+}
+
+.table-data-section .table .name-col {
+    min-width: 100px;
+    word-break: break-all;
+}
+
+.table-data-section .table .description-col {
+    min-width: 253px;
+}
+
+.table-data-section .table .product-data-content .table-data {
+    word-break: break-all;
+}
